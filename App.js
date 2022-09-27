@@ -1,11 +1,11 @@
 import React from 'react';
-import {View, StyleSheet, Text} from 'react-native';
-import SigningScreen from './src/screens/SigningScreen';
+import {View, StyleSheet} from 'react-native';
+import Navigation from './src/navigation';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <SigningScreen />
+      <Navigation />
     </View>
   );
 };

@@ -3,6 +3,7 @@ import React from 'react';
 
 import CustomInput from '../components/CustomInput';
 import CustomButton from '../components/CustomButton';
+import SocialSIgnInButtons from '../components/SocialSIgnInButtons';
 
 const SigningScreen = () => {
   const [username, setUsername] = React.useState('');
@@ -14,18 +15,6 @@ const SigningScreen = () => {
 
   const onForgetPasswordPress = () => {
     console.warn('Forget Password');
-  };
-
-  const onSignInFacebook = () => {
-    console.warn('Facebook');
-  };
-
-  const onSignInGoogle = () => {
-    console.warn('Facebook');
-  };
-
-  const onSignInApple = () => {
-    console.warn('Facebook');
   };
 
   const onSignUpPress = () => {
@@ -55,24 +44,7 @@ const SigningScreen = () => {
           onPress={onForgetPasswordPress}
           type="TERTIARY"
         />
-        <CustomButton
-          text="Sign In with Facebook"
-          onPress={onSignInFacebook}
-          bgColor="#E7EAF4"
-          fgColor={'#4765A9'}
-        />
-        <CustomButton
-          text="Sign In with Google"
-          onPress={onSignInGoogle}
-          bgColor="#FAE9EA"
-          fgColor="#DD4D44"
-        />
-        <CustomButton
-          text="Sign In with AppleID"
-          onPress={onSignInApple}
-          bgColor="#E3E3E3"
-          fgColor="#363636"
-        />
+        <SocialSIgnInButtons />
         <CustomButton
           text="Don't have an account? Create one."
           onPress={onSignUpPress}
@@ -92,7 +64,7 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     width: 100,
-    backgroundColor: 'yellow',
+    backgroundColor: '#6EDBFF',
     height: 100,
     borderRadius: 50,
     borderWidth: 3,
